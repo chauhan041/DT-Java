@@ -29,7 +29,8 @@
                     <td>${product.productCategory}</td>
                     <td>${product.productCondition}</td>
                     <td>${product.productPrice} USD </td>
-                    <td><span class="glyphicon glyphicon-info-sign"></span></td>
+                    <td><a href="<spring:url value="/productList/viewProduct/${product.productId}" />"
+                    ><span class="glyphicon glyphicon-info-sign"></a></span></td>
                 </tr>
             </c:forEach>
         </table>

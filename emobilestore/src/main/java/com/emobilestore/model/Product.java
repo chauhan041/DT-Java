@@ -1,6 +1,8 @@
 package com.emobilestore.model;
 
 public class Product {
+	private String productId;
+	
 	private String productName;
 	private String productDescription;
 	private String productCategory;
@@ -11,6 +13,12 @@ public class Product {
 	private String productManufacturer;
 	
 	
+	public String getProductId() {
+		return productId;
+	}
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
 	public String getProductName() {
 		return productName;
 	}
