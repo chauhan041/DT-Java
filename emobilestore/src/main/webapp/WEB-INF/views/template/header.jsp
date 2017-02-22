@@ -1,4 +1,6 @@
-<!doctype html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+  <!doctype html>
 
 <html lang="en">
   <head>
@@ -86,12 +88,12 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.jsp">Home</a></li>
+                        <li class="active"><a href="<c:url value="/"/>">Home</a></li>
                        
                         
-                        <li><a href="cart.jsp">Cart</a></li>
+                        <li><a href="<c:url value="/productList"/>">Products</a></li>
                        
-                        <li><a href="#">Category</a></li>
+                        
                         
                         <li><a href="contact">Contact</a></li>
                         <li><a href="about">about us</a></li>
