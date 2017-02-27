@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ include file="/WEB-INF/views/template/header.jsp"%>
 
@@ -13,7 +14,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5">
-					<img src="#" alt="image" style="width: 100%; height: 300px" />
+					<img src="<c:url value="/resources/images/${product.productId}.png" />" alt="image" style="width: 100%; height: 400px" />
 				</div>
 
 				<div class="col-md-5">

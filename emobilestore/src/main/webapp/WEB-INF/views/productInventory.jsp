@@ -8,10 +8,10 @@
         <div class="page-header">
             <h1>Product Inventory Page</h1>
 
-
             <p class="lead">This is the product inventory page:</p>
+            </div>
 
-        <table class="table table-striped table-hover">
+        <table class="table table-striped table-hover" style="table-layout: fixed; overflow: auto;">
             <thead>
             <tr class="bg-success">
                 <th>Proto Thumb</th>
@@ -30,8 +30,8 @@
                     <td>${product.productCondition}</td>
                     <td>${product.productPrice} USD </td>
                     <td>
-                        <a href="<spring:url value="/product/viewProduct/${product.productId}" />"><span class="glyphicon glyphicon-info-sign"></span></a>
-                        <a href="<spring:url value="/admin/product/deleteProduct/${product.productId}" />"><span class="glyphicon glyphicon-remove"></span></a>
+                        <a href="<spring:url value="/productList/viewProduct/${product.productId}" />"><span class="glyphicon glyphicon-info-sign"></span></a>
+                        <a href="<spring:url value="/admin/productInventory/deleteProduct/${product.productId}" />"><span class="glyphicon glyphicon-remove"></span></a>
                         <a href="<spring:url value="/admin/product/editProduct/${product.productId}" />"><span class="glyphicon glyphicon-pencil"></span></a>
                     </td>
                 </tr>
