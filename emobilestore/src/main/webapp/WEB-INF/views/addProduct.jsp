@@ -21,13 +21,10 @@
 			</div>
 
 			<div class="form-group">
-				<label for="category">Category</label> <label
-					class="checkbox-inline"><form:radiobutton
-						path="productCategory" id="category" value="mobile" />Mobile</label>
-				<label class="checkbox-inline"><form:radiobutton
-						path="productCategory" id="category" value="tablet" />Tablet</label> <label
-					class="checkbox-inline"><form:radiobutton
-						path="productCategory" id="category" value="accessory" />Accessory</label>
+				<label for="category">Category</label> 
+				<label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="mobile" />Mobile</label>
+				<label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="tablet" />Tablet</label> 
+				<label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="accessory" />Accessory</label>
 			</div>
 
 			<div class="form-group">
