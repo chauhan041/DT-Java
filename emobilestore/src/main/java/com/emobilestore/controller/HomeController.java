@@ -85,7 +85,12 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/admin/productInventory/addProduct", method = RequestMethod.POST)
-	public String addProductPost(@ModelAttribute("product") Product product, HttpServletRequest request) {
+	public String addProductPost(@Valid @ModelAttribute("product") Product product, BindingResult result, HttpServletRequest request) {
+		
+		if(result.hasErrors()){
+            return "addProduct";
+        }
+
 		productDao.addProduct(product);
 		
 		MultipartFile productImage = product.getProductImage();
@@ -103,6 +108,8 @@ public class HomeController {
 		
 		return "redirect:/admin/productInventory";
 	}
+	
+	
 	
 	@RequestMapping("/admin/productInventory/deleteProduct/{id}")
 	 public String deleteProduct(@PathVariable String id, Model model, HttpServletRequest request){
@@ -123,6 +130,7 @@ public class HomeController {
 	}
 	
 	
+	
 	@RequestMapping("/admin/productInventory/editProduct/{id}")
     public String editProduct(@PathVariable("id") String id,  Model model){
         Product product = productDao.getProductById(id);
@@ -134,8 +142,11 @@ public class HomeController {
 
 
     @RequestMapping(value="admin/productInventory/editProduct", method = RequestMethod.POST)
-    public String editProduct( @ModelAttribute("product") Product product, Model model, HttpServletRequest request){
-
+    public String editProduct( @Valid @ModelAttribute("product") Product product, Model model, BindingResult result, HttpServletRequest request){
+    	
+    	if(result.hasErrors()){
+            return "editProduct";
+        }
 
         MultipartFile productImage = product.getProductImage();
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
