@@ -13,18 +13,20 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
     
+     <!-- Angular.JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+    
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<c:url value= "/resources/css/bootstrap.min.css"/>">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<c:url value="/resources/css/font-awesome.min.css"/>">
     
-    <!-- Custom CSS -->
+   <!-- Custom CSS -->
     <link rel="stylesheet" href="<c:url value="/resources/css/owl.carousel.css"/>">
-    <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
-    <link rel="stylesheet" href="<c:url value="/resources/css/responsive.css"/>">
-
+    <link href="<c:url value="/resources/css/style1.css" />" rel="stylesheet">
     
+
   </head>
   <body>
    
@@ -47,8 +49,9 @@
                     <div class="header-right">
                         <div class="user-menu">
                             <ul>
-                                <li><a href="login"><i class="fa fa-user"></i> Login</a></li>
-                                <li><a href="register"><i class="fa fa-user"></i> Register</a></li>
+                                <li><a href="<c:url value = "/login" />"><i class="fa fa-user"></i> Login</a></li>
+                                <li><a href="<c:url value= "/register" />"><i class="fa fa-user"></i> Register</a></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -62,7 +65,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="./"><img src="resources/images/logo.png"></a></h1>
+                        <h1><a href="./"><img src="<c:url value="/resources/images/logo.png"/>"></a></h1>
                     </div>
                 </div>
                 
@@ -89,16 +92,15 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="<c:url value="/"/>">Home</a></li>
-                       
-                        
                         <li><a href="<c:url value="/productList"/>">Products</a></li>
-                       
-                        
                         
                         <li><a href="contact">Contact</a></li>
                         <li><a href="about">about us</a></li>
-                        <li><a href="productform">Add New Product</a></li>
                     </ul>
+                    <ul class = "nav navbar-nav pull-right">
+                    <li><a href="<c:url value= "/admin" />"> admin</a></li>
+                    </ul>
+                    
                 </div>  
             </div>
         </div>
